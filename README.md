@@ -2,13 +2,14 @@
 Estrutura de dados - Listas
 
 A aplicação consiste na leitura de uma lista obtida através do portal [https://dados.gov.br/](url)
-Refer-se ao censo das escolas realizado no ano de 2000
+
+Refere-se ao censo das escolas realizado no ano de 2000
 
 Menu da aplicação :
 
 ==================================
 
-============ Menu App ============
+============ Menu App =============
 
 ==================================
 
