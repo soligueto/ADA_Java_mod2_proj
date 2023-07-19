@@ -86,9 +86,6 @@ public class RegistroProcessor {
 
 	}
 
-//	
-//	
-//	
 	public void listaDistritosPorEstado(List<RegistroDTO> listaRegistros) {
 
 
@@ -106,7 +103,7 @@ public class RegistroProcessor {
 			}
 		}
 
-		System.out.println("O Estado de " + opcao + " contém : " + count + " distritos");
+		System.out.println("O Estado " + opcao + " contém : " + count + " distritos");
 
 	}
 
@@ -132,10 +129,6 @@ public class RegistroProcessor {
 		System.out.println("====================================");
 	}
 	
-	
-//	
-//	
-//	
 	public void listaEscolasEstado(List<RegistroDTO> listaRegistros) {
 
 		System.out.println("Digite o estado desejado : ");
@@ -143,13 +136,11 @@ public class RegistroProcessor {
 		scanner = new Scanner(System.in);
 		String opcao = scanner.nextLine();
 
-		int count = 0;
 
 		int municipalCount = 0;
 		int estadualCount = 0;
 		int particularCount = 0;
 		int federalCount = 0;
-		
 		
 		for (RegistroDTO registroDao : listaRegistros) {
 
@@ -178,10 +169,8 @@ public class RegistroProcessor {
 					throw new IllegalArgumentException("Unexpected value: " + registroDao);
 				}
 			}
-			count++;
 		}
 		System.out.println("========================================================");
-		System.out.println("O Estado de " + opcao + " contém : " + count + " escolas");
 		System.out.println("Municipais   : " + municipalCount);
 		System.out.println("Estaduais    : " + estadualCount);		
 		System.out.println("Particulares : " + particularCount);
@@ -219,12 +208,9 @@ public class RegistroProcessor {
 		scanner = new Scanner(System.in);
 		String opcao = scanner.nextLine();
 
-		int count = 0;
-
 		int ativoCount = 0;
 		int extintoCount = 0;
 		int paralisadoCount = 0;
-
 		
 		
 		for (RegistroDTO registroDao : listaRegistros) {
@@ -250,10 +236,8 @@ public class RegistroProcessor {
 					throw new IllegalArgumentException("Unexpected value: " + registroDao);
 				}
 			}
-			count++;
 		}
 		System.out.println("========================================================");
-		System.out.println("O Estado de " + opcao + " contém : " + count + " escolas");
 		System.out.println("Ativo      : " + ativoCount);
 		System.out.println("Extinto    : " + extintoCount);		
 		System.out.println("Paralisado : " + paralisadoCount);
