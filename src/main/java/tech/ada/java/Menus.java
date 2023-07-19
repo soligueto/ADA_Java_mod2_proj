@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import tech.ada.dao.RegistroDao;
+import tech.ada.dto.RegistroDTO;
 import tech.ada.processor.RegistroProcessor;
 
 public class Menus {
@@ -22,7 +22,7 @@ public class Menus {
 		switch (opcao) {
 		case 1: {
 
-			List<RegistroDao> listaRegistros = processor.read();
+			List<RegistroDTO> listaRegistros = processor.read();
 			processor.totalRegistros(listaRegistros);
 			apresentacaoApp();
 			break;
@@ -30,7 +30,7 @@ public class Menus {
 		}
 		case 2: {
 
-			List<RegistroDao> listaRegistros = processor.read();
+			List<RegistroDTO> listaRegistros = processor.read();
 
 			processor.listaDistritos(listaRegistros);
 			apresentacaoOp2();
@@ -52,7 +52,7 @@ public class Menus {
 		}
 		case 3: {
 
-			List<RegistroDao> listaRegistros = processor.read();
+			List<RegistroDTO> listaRegistros = processor.read();
 
 			processor.censoEscolas(listaRegistros);
 			apresentacaoOp3();
@@ -74,7 +74,7 @@ public class Menus {
 		}
 		case 4: {
 
-			List<RegistroDao> listaRegistros = processor.read();
+			List<RegistroDTO> listaRegistros = processor.read();
 
 			processor.statusEscolas(listaRegistros);
 			apresentacaoOp2();

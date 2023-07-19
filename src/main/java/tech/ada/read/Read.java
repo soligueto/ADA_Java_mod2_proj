@@ -2,7 +2,7 @@ package tech.ada.read;
 
 import java.util.List;
 
-import tech.ada.dao.RegistroDao;
+import tech.ada.dto.RegistroDTO;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -14,10 +14,10 @@ public class Read {
 
 	private static String CAMINHO_ARQUIVO = "src/main/resources/censo_adapt.csv";
 
-	public List<RegistroDao> reader() throws FileNotFoundException {
+	public List<RegistroDTO> reader() throws FileNotFoundException {
 		
 		BufferedReader br = new BufferedReader(new FileReader(CAMINHO_ARQUIVO));
-		ArrayList<RegistroDao> listaRegistros = new ArrayList<>();
+		ArrayList<RegistroDTO> listaRegistros = new ArrayList<>();
 				
             try {
 				br.readLine();
@@ -34,7 +34,7 @@ public class Read {
 	            	String local = dados[7].trim();
 	            	String codFuncionamento = dados[8].trim();
 	            		            	
-	            	RegistroDao registro = new RegistroDao();
+	            	RegistroDTO registro = new RegistroDTO();
 	            	registro.setId(id);
 	            	registro.setAno(ano);
 	            	registro.setCodMunicipio(codMunicipio);

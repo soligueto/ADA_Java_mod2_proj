@@ -1,6 +1,6 @@
-package tech.ada.dao;
+package tech.ada.dto;
 
-public class RegistroDao {
+public class RegistroDTO {
 
 
 	private Long id;
@@ -13,11 +13,11 @@ public class RegistroDao {
 	private String local;
 	private String codFuncionamento;
 
-	public RegistroDao() {
+	public RegistroDTO() {
 		super();
 	}
 
-	public RegistroDao(long id, int ano, String codMunicipio, String uf, String sigla, String municipio,
+	public RegistroDTO(long id, int ano, String codMunicipio, String uf, String sigla, String municipio,
 			String dep, String local, String codFuncionamento) {
 		// TODO Auto-generated constructor stub
 	}

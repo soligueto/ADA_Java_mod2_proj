@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-import tech.ada.dao.RegistroDao;
+import tech.ada.dto.RegistroDTO;
 import tech.ada.java.Menus;
 import tech.ada.read.Read;
 
@@ -39,8 +39,8 @@ public class RegistroProcessor {
 		}
 	}
 
-	public List<RegistroDao> read() {
-		List<RegistroDao> listaRegistro = null;
+	public List<RegistroDTO> read() {
+		List<RegistroDTO> listaRegistro = null;
 		Read leitor = new Read();
 
 		try {
@@ -52,7 +52,7 @@ public class RegistroProcessor {
 		return listaRegistro;
 	}
 
-	public void totalRegistros(List<RegistroDao> listaRegistros) {
+	public void totalRegistros(List<RegistroDTO> listaRegistros) {
 
 		long count = 0;
 
@@ -65,11 +65,11 @@ public class RegistroProcessor {
 		System.out.println("");
 	}
 
-	public void listaDistritos(List<RegistroDao> listaRegistros) {
+	public void listaDistritos(List<RegistroDTO> listaRegistros) {
 
 		List<String> listaEstados = new ArrayList<>();
 
-		for (RegistroDao registroDao : listaRegistros) {
+		for (RegistroDTO registroDao : listaRegistros) {
 
 			listaEstados.add(registroDao.getUf());
 
@@ -89,7 +89,7 @@ public class RegistroProcessor {
 //	
 //	
 //	
-	public void listaDistritosPorEstado(List<RegistroDao> listaRegistros) {
+	public void listaDistritosPorEstado(List<RegistroDTO> listaRegistros) {
 
 
 		System.out.println("Digite o estado desejado : ");
@@ -99,7 +99,7 @@ public class RegistroProcessor {
 
 		int count = 0;
 
-		for (RegistroDao registroDao : listaRegistros) {
+		for (RegistroDTO registroDao : listaRegistros) {
 
 			if (registroDao.getUf().contains(opcao)) {
 				count++;
@@ -110,11 +110,11 @@ public class RegistroProcessor {
 
 	}
 
-	public void censoEscolas(List<RegistroDao> listaRegistros) {
+	public void censoEscolas(List<RegistroDTO> listaRegistros) {
 
 		List<String> listaEstados = new ArrayList<>();
 
-		for (RegistroDao registroDao : listaRegistros) {
+		for (RegistroDTO registroDao : listaRegistros) {
 
 			listaEstados.add(registroDao.getDep());
 
@@ -136,7 +136,7 @@ public class RegistroProcessor {
 //	
 //	
 //	
-	public void listaEscolasEstado(List<RegistroDao> listaRegistros) {
+	public void listaEscolasEstado(List<RegistroDTO> listaRegistros) {
 
 		System.out.println("Digite o estado desejado : ");
 
@@ -151,7 +151,7 @@ public class RegistroProcessor {
 		int federalCount = 0;
 		
 		
-		for (RegistroDao registroDao : listaRegistros) {
+		for (RegistroDTO registroDao : listaRegistros) {
 
 
 			
@@ -190,11 +190,11 @@ public class RegistroProcessor {
 		
 	}
 
-	public void statusEscolas(List<RegistroDao> listaRegistros) {
+	public void statusEscolas(List<RegistroDTO> listaRegistros) {
 
 		List<String> listaEstados = new ArrayList<>();
 
-		for (RegistroDao registroDao : listaRegistros) {
+		for (RegistroDTO registroDao : listaRegistros) {
 
 			listaEstados.add(registroDao.getCodFuncionamento());
 
@@ -212,7 +212,7 @@ public class RegistroProcessor {
 		System.out.println("=====================================");
 	}
 	
-	public void listaStatusEstado(List<RegistroDao> listaRegistros) {
+	public void listaStatusEstado(List<RegistroDTO> listaRegistros) {
 
 		System.out.println("Digite o estado desejado : ");
 
@@ -227,7 +227,7 @@ public class RegistroProcessor {
 
 		
 		
-		for (RegistroDao registroDao : listaRegistros) {
+		for (RegistroDTO registroDao : listaRegistros) {
 
 
 			
